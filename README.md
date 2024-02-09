@@ -1,6 +1,6 @@
 # Snake
 
-Snake is a classic game in which you play as a snake and try to eat apples while avoiding hitting your own tail or the walll. The objective of the game is to grow longer, you grow by 1 block for each apple you eat.
+Snake is a classic game in which you play as a snake and try to eat apples while avoiding hitting your own tail or the wall. The objective of the game is to grow longer, you grow by 1 block for each apple you eat.
 
 ## Installation
 
