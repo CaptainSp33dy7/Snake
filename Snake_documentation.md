@@ -13,55 +13,55 @@ The `SNAKE` class represents a snake object in a game. The snake has a body comp
 
 #### Attributes:
 
-##### `body`
-- Type: List of Vector2
-- Description: Represents the snake's body, where each element is a Vector2 object representing the position of a block in the game grid.
+- `body`
+    - Type: List of Vector2
+    - Description: Represents the snake's body, where each element is a Vector2 object representing the position of a block in the game grid.
 
-##### `direction`
-- Type: Vector2
-- Description: Represents the current direction in which the snake is moving.
+- `direction`
+    - Type: Vector2
+    - Description: Represents the current direction in which the snake is moving.
 
-##### `new_block`
-- Type: Boolean
-- Description: Indicates whether the snake needs to grow by adding a new block.
+- `new_block`
+    - Type: Boolean
+    - Description: Indicates whether the snake needs to grow by adding a new block.
 
-##### `Head and Tail Graphics:`
-- Type: Pygame image objects
-- Description: Images representing the snake's head and tail in different orientations.
+- `Head and Tail Graphics:`
+    - Type: Pygame image objects
+    - Description: Images representing the snake's head and tail in different orientations.
 
-##### `Body Graphics:`
-- Type: Pygame image objects
-- Description: Images representing different configurations of the snake's body based on its path and direction.
+- `Body Graphics:`
+    - Type: Pygame image objects
+    - Description: Images representing different configurations of the snake's body based on its path and direction.
 
-##### `crunch_sound`
-- Type: Pygame sound object
-- Description: Sound played when the snake consumes food.
+- `crunch_sound`
+    - Type: Pygame sound object
+    - Description: Sound played when the snake consumes food.
 
 #### Methods:
 
-##### `__init__(self)`
-- Description: Initializes the snake with a default body, direction, and graphics.
+- `__init__(self)`
+    - Description: Initializes the snake with a default body, direction, and graphics.
 
-##### `draw_snake(self)`
-- Description: Draws the snake on the game display surface using different images for the head, tail, and body.
+- `draw_snake(self)`
+    - Description: Draws the snake on the game display surface using different images for the head, tail, and body.
 
-##### `update_head_graphics(self)`
-- Description: Updates the snake's head image based on its current direction.
+- `update_head_graphics(self)`
+    - Description: Updates the snake's head image based on its current direction.
 
-##### `update_tail_graphics(self)`
-- Description: Updates the snake's tail image based on its last movement.
+- `update_tail_graphics(self)`
+    - Description: Updates the snake's tail image based on its last movement.
 
-##### `move_snake(self)`
-- Description: Moves the snake in its current direction, and if a new block is flagged, it also adds a new block to the snake.
+- `move_snake(self)`
+    - Description: Moves the snake in its current direction, and if a new block is flagged, it also adds a new block to the snake.
 
-##### `add_block(self)`
-- Description: Flags the need to add a new block to the snake, typically called when the snake consumes food.
+- `add_block(self)`
+    - Description: Flags the need to add a new block to the snake, typically called when the snake consumes food.
 
-##### `play_crunch_sound(self)`
-- Description: Plays the crunch sound when the snake consumes food.
+- `play_crunch_sound(self)`
+    - Description: Plays the crunch sound when the snake consumes food.
 
-##### `reset(self)`
-- Description: Resets the snake to its initial state with a default body and direction.
+- `reset(self)`
+    - Description: Resets the snake to its initial state with a default body and direction.
 
 
 ### 2. class FRUIT
@@ -71,28 +71,28 @@ The `FRUIT` class represents the fruit object in the game, which serves as the s
 
 #### Attributes:
 
-##### `x`
-- Type: Integer
-- Description: The x-coordinate of the fruit's position on the game grid.
+- `x`
+    - Type: Integer
+    - Description: The x-coordinate of the fruit's position on the game grid.
 
-##### `y`
-- Type: Integer
-- Description: The y-coordinate of the fruit's position on the game grid.
+- `y`
+    - Type: Integer
+    - Description: The y-coordinate of the fruit's position on the game grid.
 
-##### `pos`
-- Type: Vector2
-- Description: A Vector2 object representing the position of the fruit on the game grid.
+- `pos`
+    - Type: Vector2
+    - Description: A Vector2 object representing the position of the fruit on the game grid.
 
 #### Methods:
 
-##### `__init__(self)`
-- Description: Initializes the fruit object with random x and y coordinates within the game grid.
+- `__init__(self)`
+    - Description: Initializes the fruit object with random x and y coordinates within the game grid.
 
-##### `draw_fruit(self)`
-- Description: Draws the fruit on the game display surface at its current position.
+- `draw_fruit(self)`
+    - Description: Draws the fruit on the game display surface at its current position.
 
-##### `randomize(self)`
-- Description: Repositions the fruit to a new random position on the game grid.
+- `randomize(self)`
+    - Description: Repositions the fruit to a new random position on the game grid.
 
 
 ### 3. class MAIN
@@ -102,46 +102,46 @@ The `MAIN` class encompasses the entire game logic, managing the snake, fruit, a
 
 #### Attributes:
 
-##### `snake`
-- Type: SNAKE object
-- Description: Represents the snake in the game.
+- `snake`
+    - Type: SNAKE object
+    - Description: Represents the snake in the game.
 
-##### `fruit`
-- Type: FRUIT object
-- Description: Represents the fruit (snake's objective) in the game.
+- `fruit`
+    - Type: FRUIT object
+    - Description: Represents the fruit (snake's objective) in the game.
 
-##### `gameover`
-- Type: Boolean
-- Description: Indicates whether the game is over.
+- `gameover`
+    - Type: Boolean
+    - Description: Indicates whether the game is over.
 
 #### Methods:
 
-##### `__init__(self)`
-- Description: Initializes the game with instances of the snake, fruit, and sets the initial game over state to False.
+- `__init__(self)`
+    - Description: Initializes the game with instances of the snake, fruit, and sets the initial game over state to False.
 
-##### `update(self)`
-- Description: Utilizes game logic, including moving the snake, checking for collisions, and checking for game failure.
+- `update(self)`
+    - Description: Utilizes game logic, including moving the snake, checking for collisions, and checking for game failure.
 
-##### `draw_elements(self)`
-- Description: Draws game elements on the display surface, including the grass background, snake, fruit, and score.
+- `draw_elements(self)`
+    - Description: Draws game elements on the display surface, including the grass background, snake, fruit, and score.
 
-##### `check_collision(self)`
-- Description: Checks if the snake has eaten the fruit and updates the game state accordingly.
+- `check_collision(self)`
+    - Description: Checks if the snake has eaten the fruit and updates the game state accordingly.
 
-##### `check_fail(self)`
-- Description: Checks for game failure conditions, such as hitting the wall or colliding with the snake's own body.
+- `check_fail(self)`
+    - Description: Checks for game failure conditions, such as hitting the wall or colliding with the snake's own body.
 
-##### `game_over(self)`
-- Description: Handles the game over scenario by resetting the snake and updating the game over state.
+- `game_over(self)`
+    - Description: Handles the game over scenario by resetting the snake and updating the game over state.
 
-##### `draw_game_over(self)`
-- Description: Draws the game over text on the display surface.
+- `draw_game_over(self)`
+    - Description: Draws the game over text on the display surface.
 
-##### `draw_grass(self)`
-- Description: Draws a checkered grass background on the display surface.
+- `draw_grass(self)`
+    - Description: Draws a checkered grass background on the display surface.
 
-##### `draw_score(self)`
-- Description: Draws the current score on the display surface.
+- `draw_score(self)`
+    - Description: Draws the current score on the display surface.
 
 
 ### 4. outside of classes
@@ -181,7 +181,7 @@ The main objectives of the code include initializing the game, handling user inp
 The game loop is the core structure of the code, responsible for continually updating, rendering, and processing user input to create a dynamic gaming experience. The key components of the game loop include:
 
 - **Event Processing:** The loop processes various events, including quitting the game (`pygame.QUIT`), updating the screen (`SCREEN_UPDATE`), and handling key presses (`pygame.KEYDOWN`).
-  
+ 
 - **User Input Handling:** Detects arrow key presses to change the snake's direction. Checks for game over scenarios, resets the score on a new game, and prevents the snake from moving in the opposite direction, causing immediate failure.
 
 - **Background Coloring:** Fills the display surface with a background color.
